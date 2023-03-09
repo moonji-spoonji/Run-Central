@@ -1,0 +1,178 @@
+/* body{
+    /* background-color: #5b9aa0; */
+    /* background-color: #d6d4e0; */
+    /* background-color: #b8a9c9; */
+    /* background-color: #622569; */
+    
+/* }  */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #000000; */
+    /* background-color: #132543; */
+    /* background-color: #3e5994; */
+    background-color: #7493f1;
+    /* background-color: #b6d2ff; */
+
+    /* background-color: hsl(225, 100%, 87%); */
+}
+
+
+li, a, button {
+    font-family: monospace, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #b6d2ff;
+    color: #002b70;
+    text-decoration: none;
+}
+
+header{
+    display: flex;    
+    justify-content: end;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    margin-right: auto;
+    margin-top: 15px ;
+}
+
+.nav-list li{
+    display: inline-block;
+    gap: 2rem;
+
+    margin: 0;
+    padding: 10px;
+    list-style-type: none; /* gets rid of the lil bullet point dot things*/
+    
+}
+
+.nav-list li a:hover{
+    color: #b6d2ff;
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #b6d2ff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: auto;
+}
+ 
+button:hover{
+    color: #b6d2ff;
+    background-color: #002b70;
+}
+
+
+/* IMAGES DISPLAYED ON FRONT PAGE */
+.registered-games-header {
+    font-size: 40px;
+    text-align: center;
+    color: #002b70;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px #3e5994;
+}
+
+.featured-games {
+    display: flex;
+    width: 80%;
+    /* height: 20%; */
+    margin: 0 auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: block;
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    height: auto;
+    box-shadow: 0 0 5px 5px #5e82ed;
+    margin: 10px 10px;
+}
+
+
+
+/* FORM CSS: COULD BRANCH OFF INTO ITS OWN HTML AND CSS FILES */
+.create {
+    color: #132543;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px 2px #3e5994;
+}
+
+.form-container{
+    display: block;
+    flex: 1;
+    flex-direction: column;
+    width: 400px;
+
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+
+.form {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px;
+    font-size: larger;
+    color: #132543;
+
+    border: #002b70;
+    box-sizing: border-box;
+    width: 420px;
+}
+
+
+
+.form-item {
+    margin: 15px 67px;
+ 
+}
+
+
+/* FOR THE ROUND-ISH INPUT BOXESX */
+.form-input {
+    border: none;
+    border-radius: 20px;
+    background-color: #bdcdff;
+    text-align: center;
+    height: 20px;
+    width: 150px;
+    align-items: right;
+    box-shadow: 0 0 5px 5px #5e82ed;
+    float: right;       /* allows inputs to be right-aligned */
+    color: #132543;
+    
+}
+
+.form-button {
+    display: block;
+    margin: 10px;
+    /* flex: 1; */
+    width: 100%;
+} 
+
+
+/* 
+@media (min-width: 768px){
+    .nav-list{
+        flex-direction: row;
+    }
+} */
+
