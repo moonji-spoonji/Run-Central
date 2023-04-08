@@ -29,3 +29,23 @@ JOIN Runs r ON g.GameID = r.GameID
 GROUP BY g.GameID, g.Name
 HAVING COUNT(r.RunID) >= 1
 ORDER BY g.Name;
+
+--comments on the top run for Cuphead
+SELECT c.CommentID, c.Comment, cr.Username
+FROM Comments c
+JOIN Users u ON c.UserID = u.UserID
+JOIN Credentials cr ON u.UserID = cr.UserID
+JOIN Runs r ON c.RunID = r.RunID
+JOIN Games g ON r.GameID = g.GameID
+WHERE g.Name = 'Cuphead' AND r.RunID = SPECIFIC_RUN_ID;
+
+
+--same as above, but for a specfic run (would be like selecting a run and seeing its comments)
+SELECT c.CommentID, c.Comment, cr.Username
+FROM Comments c
+JOIN Users u ON c.UserID = u.UserID
+JOIN Credentials cr ON u.UserID = cr.UserID
+JOIN Runs r ON c.RunID = r.RunID
+JOIN Games g ON r.GameID = g.GameID
+WHERE g.Name = 'Cuphead' AND r.RunID = INSERT_SPECIFIC_RUN_ID;
+
