@@ -1,0 +1,31 @@
+--finds what the current speedrun records are, from fastest to longest run, when looking at the game "Minecraft"
+
+SELECT r.RunID, r.Time, r.UserSubmitted
+FROM Runs r
+JOIN Games g ON r.GameID = g.GameID
+WHERE g.Name = 'Minecraft'
+ORDER BY r.Time;
+
+--finds the user that is #1 rank in the most games, probably not super useful but could be used for a profile award/badge maybe?
+SELECT r.UserSubmitted, COUNT(*) as NumTopRanks
+FROM Runs r
+JOIN GameRuns gr ON r.RunID = gr.TopRun
+GROUP BY r.UserSubmitted
+ORDER BY NumTopRanks DESC
+LIMIT 1;
+
+--Finda the top runs for Darksouls, minus any unverified runs, basically would show filtering of runs
+SELECT r.RunID, r.Time, r.UserSubmitted, r.Category
+FROM Runs r
+JOIN Games g ON r.GameID = g.GameID
+WHERE g.Name = 'Dark Souls' AND r.Verified = TRUE
+ORDER BY r.Time
+LIMIT 1;
+
+--shows all games that have at least 1 run associated with them
+SELECT g.GameID, g.Name
+FROM Games g
+JOIN Runs r ON g.GameID = r.GameID
+GROUP BY g.GameID, g.Name
+HAVING COUNT(r.RunID) >= 1
+ORDER BY g.Name;
