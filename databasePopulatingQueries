@@ -22,10 +22,10 @@ VALUES (150, 10, 2);
 
 -- Populate Games table
 INSERT INTO Games (Name, Genre)
-VALUES ('Cuphead', 'Run and gun');
+VALUES ('Cuphead', 'Shooter');
 
 INSERT INTO Games (Name, Genre)
-VALUES ('Dark Souls', 'Action RPG');
+VALUES ('Dark Souls', 'RPG');
 
 -- Populate Runs table
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
