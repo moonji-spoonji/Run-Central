@@ -5,6 +5,12 @@ VALUES ('johnsmith@example.com', '555-123-4567', 'John', 'Smith');
 INSERT INTO Users (Email, Phone, FName, LName)
 VALUES ('jane_doe@example.com', '555-987-6543', 'Jane', 'Doe');
 
+INSERT INTO Users (Email, Phone, FName, LName)
+VALUES ('admin@example.com', '555-555-5555', 'Admin', 'User');
+
+INSERT INTO Users (Email, Phone, FName, LName)
+VALUES ('mod_runner@example.com', '555-111-2222', 'Mod', 'Runner');
+
 -- Populate Credentials table
 INSERT INTO Credentials (Username, Password, UserType, UserID)
 VALUES ('john_smith', 'password123', 'Runner', 1);
@@ -12,20 +18,36 @@ VALUES ('john_smith', 'password123', 'Runner', 1);
 INSERT INTO Credentials (Username, Password, UserType, UserID)
 VALUES ('jane_doe', 'janespassword', 'Moderator', 2);
 
+INSERT INTO Credentials (Username, Password, UserType, UserID)
+VALUES ('admin_user', 'admin_password', 'Administrator', 3);
+
+INSERT INTO Credentials (Username, Password, UserType, UserID)
+VALUES ('mod_runner', 'modrunner_password', 'Moderator', 4);
+
 -- Populate Runners table
 INSERT INTO Runners (NumRuns, TopRanking, UserID)
 VALUES (15, 2, 1);
+
+INSERT INTO Runners (NumRuns, TopRanking, UserID)
+VALUES (20, 5, 4);
 
 -- Populate Moderators table
 INSERT INTO Moderators (VerifiedRuns, RemovedRuns, UserID)
 VALUES (150, 10, 2);
 
--- Populate Games table
-INSERT INTO Games (Name, Genre)
-VALUES ('Cuphead', 'Shooter');
+INSERT INTO Administrators (ManagedUsers, ManagedGames, UserID)
+VALUES (250, 15, 3);
 
-INSERT INTO Games (Name, Genre)
-VALUES ('Dark Souls', 'RPG');
+-- Populate Games table
+INSERT INTO Games (GameID, Name, Genre)
+VALUES (1, 'Cuphead', 'Run and gun');
+
+INSERT INTO Games (GameID, Name, Genre)
+VALUES (2, 'Dark Souls', 'Action RPG');
+
+INSERT INTO Games (GameID, Name, Genre)
+VALUES (3, 'Minecraft', 'Sandbox');
+
 
 -- Populate Runs table
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
@@ -34,12 +56,18 @@ VALUES ('00:45:23', 'john_smith', 'Any%', TRUE, 3, 1, 1);
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
 VALUES ('03:21:10', 'jane_doe', 'Any%', TRUE, 12, 2, 2);
 
+INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
+VALUES ('01:10:30', 'mod_runner', 'Any%', TRUE, 6, 3, 4);
+
 -- Populate GameRuns table
 INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
 VALUES (1, 1, 100, 1);
 
 INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
 VALUES (2, 2, 200, 2);
+
+INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
+VALUES (3, 3, 300, 3);
 
 -- Populate Comments table
 INSERT INTO Comments (Comment, UserID, RunID)
