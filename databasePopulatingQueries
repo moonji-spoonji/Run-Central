@@ -20,20 +20,19 @@ VALUES (15, 2, 1);
 INSERT INTO Moderators (VerifiedRuns, RemovedRuns, UserID)
 VALUES (150, 10, 2);
 
--- Populate Games table, Genre should be of the following: Action, Adventure, Casual, MMO, MMORPG
---Puzzle, Puzzle Platformer, RPG, Shooter, Strategy, Survival
+-- Populate Games table
 INSERT INTO Games (Name, Genre)
-VALUES ('Cuphead', 'Shooter');
+VALUES ('Cuphead', 'Run and gun');
 
 INSERT INTO Games (Name, Genre)
-VALUES ('Dark Souls', 'RPG');
+VALUES ('Dark Souls', 'Action RPG');
 
 -- Populate Runs table
-INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, Comments, GameID, UserID)
-VALUES ('00:45:23', 'john_smith', 'Any%', TRUE, 3, 'Great run!', 1, 1);
+INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
+VALUES ('00:45:23', 'john_smith', 'Any%', TRUE, 3, 1, 1);
 
-INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, Comments, GameID, UserID)
-VALUES ('03:21:10', 'jane_doe', 'Any%', TRUE, 12, 'Nice try, keep practicing!', 2, 2);
+INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
+VALUES ('03:21:10', 'jane_doe', 'Any%', TRUE, 12, 2, 2);
 
 -- Populate GameRuns table
 INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
@@ -41,3 +40,10 @@ VALUES (1, 1, 100, 1);
 
 INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
 VALUES (2, 2, 200, 2);
+
+-- Populate Comments table
+INSERT INTO Comments (Comment, UserID, RunID)
+VALUES ('Great run!', 1, 1);
+
+INSERT INTO Comments (Comment, UserID, RunID)
+VALUES ('Nice try, keep practicing!', 2, 2);
