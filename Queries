@@ -49,3 +49,55 @@ JOIN Runs r ON c.RunID = r.RunID
 JOIN Games g ON r.GameID = g.GameID
 WHERE g.Name = 'Cuphead' AND r.RunID = INSERT_SPECIFIC_RUN_ID;
 
+--Transaction that will perform a ban on a user and update appropriate tables
+--user_id and admin_id should be replaced by whoever was banned and what admin did the ban
+BEGIN;
+
+INSERT INTO BannedUsers (UserID, AdminID, BanExplanation, BanDuration)
+VALUES (user_id, admin_id, 'Violation of community guidelines', INTERVAL '30 days');
+
+UPDATE Administrators
+SET NumUsersBanned = NumUsersBanned + 1
+WHERE AdminID = admin_id;
+
+DELETE FROM Users
+WHERE UserID = user_id;
+
+COMMIT;
+
+--for an admin removing a comment
+BEGIN;
+
+DELETE FROM Runs WHERE RunID = run_id;
+
+UPDATE Administrators
+SET NumPostsRemoved = NumPostsRemoved + 1
+WHERE AdminID = admin_id;
+
+COMMIT;
+
+--moderator removing a run
+BEGIN;
+
+DELETE FROM Runs WHERE RunID = run_id;
+
+UPDATE Moderators
+SET RemovedRuns = RemovedRuns + 1
+WHERE ModID = mod_id;
+
+COMMIT;
+
+--moderator verifying a run
+BEGIN;
+
+-- Update the run's verified status
+UPDATE Runs
+SET Verified = TRUE
+WHERE RunID = run_id;
+
+-- Update the number of runs verified by the moderator
+UPDATE Moderators
+SET VerifiedRuns = VerifiedRuns + 1
+WHERE ModID = mod_id;
+
+COMMIT;
