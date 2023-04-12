@@ -51,13 +51,13 @@ VALUES (3, 'Minecraft', 'Sandbox');
 
 -- Populate Runs table
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
-VALUES ('00:45:23', 'john_smith', 'Any%', TRUE, 3, 1, 1);
+VALUES ('00:45:23', 'john_smith', 'Any%', FALSE, 3, 1, 1);
 
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
 VALUES ('03:21:10', 'jane_doe', 'Any%', TRUE, 12, 2, 2);
 
 INSERT INTO Runs (Time, UserSubmitted, Category, Verified, Ranking, GameID, UserID)
-VALUES ('01:10:30', 'mod_runner', 'Any%', TRUE, 6, 3, 4);
+VALUES ('01:10:30', 'mod_runner', 'Any%', FALSE, 6, 3, 4);
 
 -- Populate GameRuns table
 INSERT INTO GameRuns (GameID, RunID, TotalRuns, TopRun)
