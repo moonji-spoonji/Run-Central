@@ -35,8 +35,8 @@ VALUES (20, 5, 4);
 INSERT INTO Moderators (VerifiedRuns, RemovedRuns, UserID)
 VALUES (150, 10, 2);
 
-INSERT INTO Administrators (ManagedUsers, ManagedGames, UserID)
-VALUES (250, 15, 3);
+INSERT INTO Administrators (AdminID, NumUsersBanned, NumPostsRemoved, UserID)
+VALUES (1, 5, 15, 3);
 
 -- Populate Games table
 INSERT INTO Games (GameID, Name, Genre)
