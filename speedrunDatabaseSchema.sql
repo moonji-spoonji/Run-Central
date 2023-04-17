@@ -9,7 +9,7 @@ CREATE TABLE Users (
 CREATE TABLE Credentials (
   Username VARCHAR(50) PRIMARY KEY,
   Password VARCHAR(50) NOT NULL,
-  UserType ENUM('User', 'Runner', 'Moderator', 'Administrator') NOT NULL,
+  UserType TEXT NOT NULL,
   UserID INTEGER REFERENCES Users(UserID) ON DELETE CASCADE
 );
 
