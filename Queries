@@ -9,7 +9,8 @@ ORDER BY r.Time;
 --finds the user that is #1 rank in the most games, probably not super useful but could be used for a profile award/badge maybe?
 SELECT r.UserSubmitted, COUNT(*) as NumTopRanks
 FROM Runs r
-JOIN GameRuns gr ON r.RunID = gr.TopRun
+JOIN GameRuns gr ON r.RunID = gr.RunID
+WHERE r.Ranking = 1
 GROUP BY r.UserSubmitted
 ORDER BY NumTopRanks DESC
 LIMIT 1;
