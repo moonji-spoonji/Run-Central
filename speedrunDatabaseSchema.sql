@@ -12,7 +12,7 @@ CREATE TABLE Credentials (
   UserType TEXT NOT NULL,
   UserID INTEGER REFERENCES Users(UserID) ON DELETE CASCADE
 );
-
+--TopTanking should be an int that relates a RunID
 CREATE TABLE Runners (
   RunnerID SERIAL PRIMARY KEY,
   NumRuns INTEGER NOT NULL,
@@ -65,10 +65,9 @@ CREATE TABLE Comments (
   Comment TEXT
 );
 
-
+--RunID refers to the top run of that game
 CREATE TABLE GameRuns (
   GameID INTEGER REFERENCES Games(GameID) ON DELETE CASCADE,
   RunID INTEGER REFERENCES Runs(RunID) ON DELETE CASCADE,
   TotalRuns INTEGER NOT NULL,
-  TopRun INTEGER NOT NULL
 );
