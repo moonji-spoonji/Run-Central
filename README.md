@@ -6,7 +6,8 @@ All new runs added must be automatically set to NOT verified, and mod has to ver
 
 Moderators are responsible for overlooking runs (verifying/removing) while admins are responsible for user moderation (banning/removing posts)
 
-Jae is now a contributor #slaebae
+values such as gameID, userID, etc DO NOT NEED TO BE SPECIFIED when being inserted. They are SERIAL values and such SQL will automatically assign values to
+them.
 
 Game Genres Supported:
 
