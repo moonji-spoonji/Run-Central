@@ -1,53 +1,38 @@
-#Run Central
+# create-svelte
 
-Things to remember (add to this if youd like):
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-All new runs added must be automatically set to NOT verified, and mod has to verify 
+## Creating a project
 
-Moderators are responsible for overlooking runs (verifying/removing) while admins are responsible for user moderation (banning/removing posts)
+If you're seeing this, you've probably already done this step. Congrats!
 
-values such as gameID, userID, etc DO NOT NEED TO BE SPECIFIED when being inserted. They are SERIAL values and such SQL will automatically assign values to
-them.
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-Game Genres Supported:
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-Action RPG
-FPS
+## Developing
 
-Fighting
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-Horror Survival
+```bash
+npm run dev
 
-MMO
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-Metroidvania
+## Building
 
-Party
+To create a production version of your app:
 
-Platformer
+```bash
+npm run build
+```
 
-Puzzle Platformer
+You can preview the production build with `npm run preview`.
 
-Racing
-
-Roguelike
-
-Rythm
-
-SandBox
-
-Shoot 'em Ups
-
-Simulator
-
-Sports
-
-Stealth
-
-Strategy
-
-Survival
-
-Tower Defence
-
-Turn Base Strategy
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
