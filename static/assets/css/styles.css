@@ -17,6 +17,7 @@
     /* background-color: #b6d2ff; */
 
     /* background-color: hsl(225, 100%, 87%); */
+    font-family: monospace, sans-serif;
 }
 
 h1 {
@@ -24,10 +25,6 @@ h1 {
     text-align: center;
 }
 
-h2 {
-    font-size: 36px;
-    padding: 5px 15%;
-}
 
 li, a, button {
     font-family: monospace, sans-serif;
@@ -45,38 +42,8 @@ header{
     padding: 10px 5%;
 }
 
-.video {
-    margin-left:  20%;
-    margin-bottom: 10px;
-}
-
-.reasons-to-join{
-    font-size: 24px;
-    padding: 5px 20%;
-}
 
 
-.nav-list li{
-    display: inline-block;
-    gap: 2rem;
-
-    margin: 0;
-    padding: 10px;
-    list-style-type: none; /* gets rid of the lil bullet point dot things*/
-    
-}
-
-.nav-list li a:hover{
-    color: #003994;
-}
-
-
-.logo {
-    height: 30px;
-    width: auto;
-    margin-right: auto;
-    margin-top: 5px;
-}
 
 button{
     padding: 10px 20px;

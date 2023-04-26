@@ -13,9 +13,42 @@
             <li><a href ="/"> Home </a></li>
             <li><a href = "/games"> Games </a></li> <!-- make it a drop-down menu with genres as categories and particular games as elements -->
             <!-- <li><a href = "/popular"> Popular </a></li> takes user to a new page that shows most visited users and games -->
+            <li><a href = "/records"> Records </a></li>
             <li><a href = "/new-record"> Add a Record </a></li>
             <li><a href = "/add-game"> Add Game </a></li>
         </ul>
     </nav>
     <a href = "/sign-up"> <button> Sign In/Sign Up </button></a>
 </header>
+
+
+<style>
+
+    .nav-list li{
+        display: inline-block;
+        gap: 2rem;
+
+        margin: 0;
+        padding: 10px;
+        list-style-type: none; /* gets rid of the lil bullet point dot things*/
+        font-family: monospace, sans-serif;
+    }
+
+    .nav-list li a:hover{
+        color: #1f75fe;
+    }
+
+    .logo {
+        /* height: 20px;
+        width: auto; */
+        width: 100px;
+        height: auto;
+        font-size: 15px;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+</style>
