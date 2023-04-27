@@ -5,13 +5,4 @@
 </script>
 
 <Table tableData={data.runs} />
-<!-- 
-<table>
-    <tr>
-        <th>Username</th>
-        <th>Game</th>
-        <th>Time</th>
-        <th>Status</th>
-    </tr>
-    
-</table> -->
+

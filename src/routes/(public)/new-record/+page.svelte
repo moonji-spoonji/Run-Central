@@ -5,7 +5,7 @@
     // console.log(data.games);
 </script>
 
- 
+
 <h1 class="create">Add a New Record!</h1>
     <!-- FORM FOR SIGNING UP/ SIGNING IN -->
     <div class="form-container">

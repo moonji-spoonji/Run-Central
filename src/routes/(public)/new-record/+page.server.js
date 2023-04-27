@@ -18,7 +18,7 @@ export const actions = {
         // const user_id = formData.get("username");
 
         // 1. Query users table by email address submitted in the form (just a .run())
-        // const foundUser =
+        // const foundUser = db.prepare("SELECT user_id FROM users WHERE"
 
         // 2. Extract user_id from #1
         // const user_id = foundUser.user_id
